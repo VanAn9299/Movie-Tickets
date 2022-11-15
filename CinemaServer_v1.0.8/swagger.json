@@ -1,0 +1,434 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "1.0.0",
+        "title": "Cinema server",
+        "description": "This is a server which use for assignment or MOCK project of FPT Software. We strictly forbidden to distribute or use for commercial purposes.\n\nPlease contact with trainer FPT.VietCPQ if server can't run.",
+        "license": {
+            "name": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
+        }
+    },
+    "host": "localhost:3003",
+    "basePath": "/",
+    "tags": [
+        {
+            "name": "Cinema",
+            "description": "API use to contact with all infomation of Cinema"
+        },
+        {
+            "name": "Movie",
+            "description": "API use to contact with all infomation of Movie"
+        },
+        {
+            "name": "User",
+            "description": "API use to manage user infomation"
+        }
+    ],
+    "schemes": [
+        "http"
+    ],
+    "consumes": [
+        "application/json"
+    ],
+    "produces": [
+        "application/json"
+    ],
+    "paths": {
+        "/cinema": {
+            "get": {
+                "tags": [
+                    "Cinema"
+                ],
+                "summary": "Get all cinema's type in Viet Nam.",
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "500": {
+                        "description": "Server error."
+                    }
+                }
+            }
+        },
+        "/cinema/branch": {
+            "get": {
+                "tags": [
+                    "Cinema"
+                ],
+                "summary": "Get all cinema's branch.",
+                "parameters": [
+                    {
+                        "name": "cineplex",
+                        "in": "query",
+                        "description": "Id of cinema type.",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "lastIndex",
+                        "in": "query",
+                        "description": "Index of last item which show on screen.",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "count",
+                        "in": "query",
+                        "description": "Number of object you want to show on screen.",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "500": {
+                        "description": "Server error."
+                    }
+                }
+            }
+        },
+        "/cinema/branch/detail": {
+            "get": {
+                "tags": [
+                    "Cinema"
+                ],
+                "summary": "Get all cinema's branch.",
+                "parameters": [
+                    {
+                        "name": "cineplex",
+                        "in": "query",
+                        "description": "Id of cinema type.",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "apiCinemaId",
+                        "in": "query",
+                        "description": "Id of cinema branch. \n\n*Note: Remember id exist as string type, therefore when you use it, don't forget zero number at first string like '037'",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "500": {
+                        "description": "Server error."
+                    }
+                }
+            }
+        },
+        "/cinema/branch/schedule": {
+            "get": {
+                "tags": [
+                    "Cinema"
+                ],
+                "summary": "Get cinema schedule.",
+                "parameters": [
+                    {
+                        "name": "cineplex",
+                        "in": "query",
+                        "description": "Id of cinema type.",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "apiCinemaId",
+                        "in": "query",
+                        "description": "Id of cinema branch. \n\n*Note: Remember id exist as string type, therefore when you use it, don't forget zero number at first string like '037'",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "date",
+                        "in": "query",
+                        "description": "Date is the time you want to show shedule.\n\n*Note: Date type is 'yyyy-MM-dd'",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "500": {
+                        "description": "Server error."
+                    }
+                }
+            }
+        },
+        "/movie": {
+            "get": {
+                "tags": [
+                    "Movie"
+                ],
+                "summary": "Get movie is showing or will be comming. *Note: json of 'now' and 'show' is difference*",
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "500": {
+                        "description": "Server error."
+                    }
+                }
+            }
+        },
+        "/movie/schedule": {
+            "get": {
+                "tags": [
+                    "Movie"
+                ],
+                "summary": "Get movie schedule.",
+                "parameters": [
+                    {
+                        "name": "apiFilmId",
+                        "in": "query",
+                        "description": "Id of film.",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "date",
+                        "in": "query",
+                        "description": "Date is the time you want to show shedule.\n\n*Note: Date type is 'yyyy-MM-dd'",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "cineplex",
+                        "in": "query",
+                        "description": "Id of Cinema",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "500": {
+                        "description": "Server error."
+                    }
+                }
+            }
+        },
+        "/movie/comment": {
+            "get": {
+                "tags": [
+                    "Movie"
+                ],
+                "summary": "Get movie comment.",
+                "parameters": [
+                    {
+                        "name": "apiFilmId",
+                        "in": "query",
+                        "description": "Id of film.",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "500": {
+                        "description": "Server error."
+                    }
+                }
+            }
+        },
+        "/movie/detail": {
+            "get": {
+                "tags": [
+                    "Movie"
+                ],
+                "summary": "Get movie detail.",
+                "parameters": [
+                    {
+                        "name": "apiFilmId",
+                        "in": "query",
+                        "description": "Id of film.",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "500": {
+                        "description": "Server error."
+                    }
+                }
+            }
+        },
+        "/user": {
+            "get": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "Get user information.",
+                "parameters": [
+                    {
+                        "name": "email",
+                        "in": "query",
+                        "description": "Email of user.",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "500": {
+                        "description": "Server error."
+                    }
+                }
+            }
+        },
+        "/user/login": {
+            "post": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "Login action.",
+                "parameters": [
+                    {
+                        "name": "user",
+                        "in": "body",
+                        "description": "This is user's infomation.",
+                        "required": true,
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "email": {
+                                    "type": "string"
+                                },
+                                "password": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "500": {
+                        "description": "Server error."
+                    }
+                }
+            }
+        },
+        "/user/register": {
+            "post": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "Register action.",
+                "parameters": [
+                    {
+                        "name": "user",
+                        "in": "body",
+                        "description": "This is user's infomation.",
+                        "required": true,
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "email": {
+                                    "type": "string"
+                                },
+                                "password": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "500": {
+                        "description": "Server error."
+                    }
+                }
+            }
+        },
+        "/user/payment": {
+            "post": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "Register action.",
+                "parameters": [
+                    {
+                        "name": "user",
+                        "in": "body",
+                        "description": "This is user's infomation.",
+                        "required": true,
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "email": {
+                                    "type": "string"
+                                },
+                                "card": {
+                                    "type": "object",
+                                    "properties": {
+                                        "cardNum": {
+                                            "type": "string"
+                                        },
+                                        "CardName": {
+                                            "type": "string"
+                                        },
+                                        "exDate": {
+                                            "type": "string"
+                                        },
+                                        "cvc": {
+                                            "type": "string"
+                                        }
+                                    }
+                                },
+                                "ticket": {
+                                    "type": "object",
+                                    "properties": {
+                                        "cineplex": {
+                                            "type": "string"
+                                        },
+                                        "apiCinemaId": {
+                                            "type": "string"
+                                        },
+                                        "apiFilmId": {
+                                            "type": "string"
+                                        },
+                                        "seatCode": {
+                                            "type": "string"
+                                        },
+                                        "date": {
+                                            "type": "string"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "500": {
+                        "description": "Server error."
+                    }
+                }
+            }
+        }
+    }
+}
