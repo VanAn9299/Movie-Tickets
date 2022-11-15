@@ -1,0 +1,93 @@
+.box_seat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.order > p {
+    color: white;
+    text-align: center;
+    width: 80%;
+    margin: 10px 0px;
+}
+.table_seat {
+    width: 80%;
+
+}
+.exam {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0px;
+    width: 100%;
+}
+.exam > div {
+    display: flex;
+    margin: 0px 20px;
+    color: white;
+}
+.exam > div span {
+    padding: 10px;
+    height: 5px;
+    width: 5px;
+    margin-right: 5px;
+}
+.exam > div:nth-child(1) span {
+    background-color: #54ab35;
+}
+.exam > div:nth-child(2) span {
+    background-color: red;
+}
+.exam > div:nth-child(3) span {
+    background-color: #ccc;
+}
+.theater {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: antiquewhite;
+    padding: 50px 0px 20px 0px;
+}   
+
+
+.theater > h3 {
+    background-color: azure;
+    padding: 2px 100px;
+    margin-bottom: 50px;
+}
+.seat {
+    display: flex;
+}
+.seat .control p {
+    padding: 5px 10px;
+    text-align: center;
+    background-color: white;
+    border: 1px solid black;
+    margin: 0px 5px 4px 5px;
+}
+.seat table tr td {
+    padding: 5px 10px;
+    
+    border-radius: 5px 5px 0px 0px;
+}
+.seat table tr td:nth-child(9){
+    display: block;
+    padding-bottom: 8px;
+    margin-right: 20px;
+}
+.checkSeat {
+    display: flex;
+    justify-content: center;
+}
+.checkSeat > button , .checkSeat > h2 {
+    background-color: #54ab35;
+    color: white;
+    margin: 20px;
+    padding: 10px 15px;
+    border-radius: 15px;
+    font-size: 20px;
+    font-weight: bolder;
+}
+.checkSeat > button:hover {
+    background-color: white;
+    color: #54ab35;
+}

@@ -1,0 +1,103 @@
+.box_check {
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cart_check {
+    width: 80%;
+    background-color: cornsilk;
+    padding-top: 20px;
+    border-radius: 5px;
+    position: relative;
+    min-height: 900px;
+
+
+}
+
+.cart_check>h1 {
+    border-bottom: 1px solid black;
+    /* font-size: 20px; */
+    padding: 0px 10px 10px 20px;
+}
+.show_cart_check {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.show_cart_check>table{
+    padding: 50px 0px 30px 60px;
+    font-size: 26px;
+    width: 70%;
+}
+.show_cart_check>table tr td {
+    padding: 10px;
+}
+.show_cart_check>table tr td:nth-child(1){
+    width: 150px;
+}
+.show_cart_check img {
+    width: 30%;
+    margin: 50px 50px 20px 20px;
+}
+.note_check {
+    position: absolute;
+    bottom: 40px;
+    left: 5%;
+    font-size: 24px;
+}
+.note_check > h3 {
+    margin: 5px 0px;
+}
+.note_check > p {
+    margin: 3px 10px;
+}
+.bill {
+    background-color: cornsilk;
+    width: 80%;
+    margin-top: 30px;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+
+}
+.bill h1 {
+    text-align: center;
+    margin-top: 20px;
+}
+.input_bill{
+    margin: 10px 20px;
+}
+.input_bill p {
+    font-size: 24px;
+    margin-top: 10px;
+}
+.input_bill input{
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 0px;
+    font-size: 20px;
+    width: 30%;
+}
+.input_bill input:focus-visible{
+    outline: 2px inset #54ab35;
+}
+.paybtn {
+    text-align: center;
+}
+.paybtn button {
+    font-size: 24px;
+    padding: 5px 10px;
+    margin-bottom: 20px;
+    border: 0px;
+    border-radius: 10px;
+    background-color: #54ab35;
+    border: 2px inset #54ab35;
+    color: white;
+}
+.paybtn button:hover {
+    background-color: white;
+    color: #54ab35;
+    border: 2px inset #54ab35;
+}

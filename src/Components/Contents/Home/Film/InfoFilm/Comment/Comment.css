@@ -1,0 +1,63 @@
+.AllComment{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+.AllCommentDiv1{
+    display: flex;
+    width: 80%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    align-items: center;
+    justify-content: space-between;
+    font-variant: small-caps;
+    border-bottom: 2px solid lightgray;
+    margin-bottom: 5px;
+}
+.AllCommentDiv1 h3 {
+    padding: 10px 20px;
+
+}
+.AllCommentDiv2{
+    display: flex;
+    height: 430px;
+    width: 80%;
+    box-sizing: border-box;
+    padding: 20px;
+    overflow-y: scroll;
+    flex-direction: column;
+}
+.AllTatCa>div{
+    display: flex;
+    width: 90%;
+}
+.AllTatCa>div>button{
+    align-items: flex-start;
+}
+.comment_one {
+    margin: 15px;
+}
+.comment_one img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    float: left;
+    margin-right: 15px;
+}
+.comment_one div {
+    font-size: 10px;
+    margin: 10px 0px;
+}
+.comment_one div  h3 {
+    opacity: 0.7;
+}
+.comment_one p {
+    margin: 10px;
+    text-transform: capitalize;
+    text-indent: 15px;
+    margin-top: 20px;
+
+}

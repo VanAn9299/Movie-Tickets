@@ -1,0 +1,27 @@
+.film{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    padding: 50px;
+    background-image: url(	https://www.bhdstar.vn/wp-content/themes/bhd/assets/images/movie-details-bg.jpg);
+}
+.headerFilm{
+    display: flex;
+    justify-content: center;
+}
+#showingFilm{
+    /* margin-right: 20px; */
+    padding-bottom: 5px;
+    color: #fff;
+    background: none;
+    border: none;
+}
+#ComingFilm{
+    margin-left: 20px;
+    padding-bottom: 5px;
+    color: #fff;
+    background: none;
+    border: none;
+}

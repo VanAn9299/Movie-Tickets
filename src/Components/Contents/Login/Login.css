@@ -1,0 +1,26 @@
+
+.login {
+    display: flex;
+    padding: 15px 10px;
+    flex-direction: column;
+    background-color: #333;
+}
+.login > input {
+    margin: 10px 0px;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+.login > h2 {
+    text-align: center;
+    color: white;
+    
+}
+.log_reg > button {
+    margin: 10px 0px;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+.error {
+    padding: 10px;
+    width: 250px;
+}

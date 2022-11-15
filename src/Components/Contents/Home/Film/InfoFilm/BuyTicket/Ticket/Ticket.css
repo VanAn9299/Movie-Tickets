@@ -1,0 +1,146 @@
+.box_ticket {
+    display: flex;
+    padding-top: 50px;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+    color: white;
+    background-image: url(https://www.bhdstar.vn/wp-content/themes/bhd/assets/images/movie-details-bg.jpg);
+    padding-bottom: 100px;
+}
+
+.head_ticket {
+    display: flex;
+    width: 80%;
+}
+
+.head_ticket>p {
+    width: 25%;
+    text-align: center;
+    padding: 10px 10px;
+    background-image: url(https://booking.bhdstar.vn/Ticketing/images/bhd_img/unselect.png);
+    background-size: 100% 100%;
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+.head_ticket>p:nth-child(1) {
+    width: 25%;
+    background-image: url(https://booking.bhdstar.vn/Ticketing/images/bhd_img/selected_f.png);
+
+}
+
+
+.title_film {
+    display: flex;
+    width: 80%;
+    margin-top: 20px;
+}
+
+.head_title_film {
+    width: 60%;
+}
+
+.head_title_film>img {
+    width: 200px;
+    float: left;
+    margin: 10px;
+}
+
+.head_title_film>h3 {
+    padding: 50px 10px 10px 0px;
+    color: #54ab35;
+    font-size: 24px;
+
+}
+
+.cart {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    /* background-color: #333; */
+    background-image: url(https://www.bhdstar.vn/wp-content/themes/bhd/assets/images/movie-details-bg.jpg);
+
+    height: 200px;
+}
+
+.cart>h1 {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid lightgray;
+    font-size: 20px;
+}
+
+.cart table {
+    padding: 10px;
+}
+
+.cart table thead td {
+    color: #54ab35;
+}
+
+.cart table td {
+    padding: 5px;
+}
+
+.note {
+    width: 80%;
+    margin: 10px 0px;
+}
+
+.note>h3 {
+    color: red;
+}
+
+.note>p {
+    margin: 5px 5px;
+}
+
+.order {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    align-items: center;
+
+}
+
+.order>h1 {
+    font-size: 24px;
+    color: white;
+    background-color: #54ab35;
+    padding: 5px 10px;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.order>h3 {
+    border: 1px solid #54ab35;
+    border-radius: 10px;
+    padding: 5px 10px;
+    color: white;
+    margin: 20px;
+}
+
+.order>h3:hover {
+    color: #54ab35;
+    background-color: white;
+}
+
+.order>table {
+    padding: 10px;
+    width: 60%;
+    border: 1px solid #54ab35;
+}
+
+.order>table thead td {
+    padding: 10px 0px;
+}
+
+.order>table button {
+    padding: 2px 10px;
+    margin: 5px 3px;
+    font-size: 18px;
+    background-color: black;
+    border: 1px solid #54ab35;
+    color: #54ab35;
+}

@@ -1,0 +1,72 @@
+.success_pape{
+    background-image: url(https://www.bhdstar.vn/wp-content/themes/bhd/assets/images/movie-details-bg.jpg);
+    padding: 20px 0px;
+}
+
+
+
+
+.box_user {
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cart_user {
+    width: 80%;
+    background-color: cornsilk;
+    padding-top: 20px;
+    border-radius: 5px;
+    position: relative;
+    min-height: 100px;
+    max-height: 1200px;
+    overflow-y: scroll;
+
+
+}
+
+.cart_user>h1 {
+    border-bottom: 1px solid black;
+    /* font-size: 20px; */
+    padding: 0px 10px 10px 20px;
+}
+.cart_user>p{
+    text-align: center;
+    margin: 30px 0px;
+    font-size: 40px;
+    font-weight: bolder;
+}
+.show_cart_user {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: 1px solid lightgray;
+}
+.show_cart_user>table{
+    padding: 50px 0px 30px 60px;
+    font-size: 26px;
+    width: 70%;
+}
+.show_cart_user>table tr td {
+    padding: 10px;
+}
+.show_cart_user>table tr td:nth-child(1){
+    width: 150px;
+}
+.show_cart_user img {
+    width: 30%;
+    margin: 50px 50px 20px 20px;
+}
+.note_user {
+    position: absolute;
+    bottom: 40px;
+    left: 5%;
+    font-size: 24px;
+}
+.note_user > h3 {
+    margin: 5px 0px;
+}
+.note_user > p {
+    margin: 3px 10px;
+}
